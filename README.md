@@ -74,29 +74,60 @@
 
 ### Termux (Android)
 
+Update packages:
 ```bash
-# Install Python
-pkg update && pkg install python
+pkg update
+```
 
-# Install dependencies (auto-installed on first run)
-pip install requests pycryptodome
+Install Python:
+```bash
+pkg install python
+```
 
-# Run
+Install dependencies:
+```bash
+pip install requests
+```
+
+```bash
+pip install pycryptodome
+```
+
+Run:
+```bash
 python main.py
 ```
 
 ### Linux / VPS
 
+Install Python:
 ```bash
-# Install Python 3.8+
 sudo apt install python3 python3-pip
+```
 
-# Install dependencies
-pip3 install requests pycryptodome
+Install requests:
+```bash
+pip3 install requests
+```
 
-# Run
+Install pycryptodome:
+```bash
+pip3 install pycryptodome
+```
+
+Run:
+```bash
 python3 main.py
 ```
+
+### Windows
+
+> ⚠️ Windows version is not publicly available. Please contact for access.
+
+| Channel | Link |
+|---------|------|
+| **Telegram** | [@HyperGox](https://t.me/HyperGox) |
+| **WhatsApp** | 01315076545 |
 
 <br/>
 
