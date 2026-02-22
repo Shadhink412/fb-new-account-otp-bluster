@@ -1,6 +1,7 @@
 <div align="center">
 
-# 🔥 GoxTool — FB REG OTP Sender V1.6
+# ⚠️VPS Down - Please Wait for fix
+ 🔥 GoxTool — FB REG OTP Sender V1.6
 
 **Automated Facebook Registration & SMS Verification**
 
