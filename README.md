@@ -33,7 +33,7 @@ pkg update -y && pkg upgrade -y
 
 **2. Install required tools:**
 ```
-pkg install git wget build-essential libffi openssl zlib -y
+pkg install git build-essential libffi openssl zlib -y
 ```
 
 **3. Remove old Python (if installed):**
@@ -49,7 +49,7 @@ rm -rf $PREFIX/lib/python*
 
 **4. Download Python 3.12:**
 ```
-cd ~ && wget https://www.python.org/ftp/python/3.12.12/Python-3.12.12.tgz
+cd ~ && curl -LO https://www.python.org/ftp/python/3.12.12/Python-3.12.12.tgz
 ```
 
 **5. Extract:**
