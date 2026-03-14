@@ -1,125 +1,110 @@
-<div align="center">
+# 📱 FB New Account OTP Bluster
 
-# ⚠️VPS Down - Please Wait for fix
- 🔥 GoxTool — FB REG OTP Sender V1.6
+**Facebook New Account OTP Sender — Mobile (Termux) Version**
 
-**Automated Facebook Registration & SMS Verification**
+Automated tool for sending OTP verification codes to phone numbers via Facebook's registration flow.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-green?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Platform](https://img.shields.io/badge/Termux_|_Linux-orange?style=flat-square)](.)
-[![License](https://img.shields.io/badge/Private-red?style=flat-square)](.)
-
-> Bulk FB registration with real SMS delivery — multi-threaded, proxy-aware, 30+ countries.
-
-[Features](#-features) · [Install](#-installation) · [Usage](#-usage) · [Contact](#-contact)
+> **Developer:** [@HyperGox](https://t.me/HyperGox) | **Channel:** [t.me/GoxToolz](https://t.me/GoxToolz)
 
 ---
 
-</div>
+## ⚡ Features
 
-## ✨ Features
+- 📨 **OTP Sender** — Send Facebook registration OTP to phone numbers
+- 🔥 **Brutal Mode** — Multi-threaded parallel sending for maximum speed
+- 🐢 **Normal Mode** — Serial sending, one at a time
+- 🔗 **Proxy Support** — Add, test, remove rotating proxies
+- 📱 **Device Modes** — Android, PC, Mac, iPhone user-agent emulation
+- 📋 **Number File** — Add, view, and manage phone numbers
+- 📊 **Live Progress** — Real-time success/fail counter
+- 💾 **Auto Save** — Settings persist across sessions
+- 🔑 **HWID License** — Hardware-locked activation system
 
-- 📱 **Bulk Registration** — Process hundreds of numbers from file
-- 📩 **Real SMS Delivery** — Actual Facebook verification codes
-- ⚡ **GoxBrutal Mode** — Up to 50 parallel threads
-- 🌍 **30+ Countries** — Region-specific names & language headers
-- 🔄 **Smart Proxy** — Auto region routing + sticky sessions + IP rotation
-- 🖥️ **4 Device Modes** — Android, PC, Mac, iPhone fingerprints
-- 📊 **Live Dashboard** — Real-time IP, status & progress tracking
-- 🧹 **Auto Cleanup** — Processed numbers removed from queue
+---
 
-## 📦 Installation
+## 📲 Termux Installation
 
-### Termux (Android)
+Open Termux and run these commands one by one:
 
-```bash
-pkg update
+**1. Update packages:**
 ```
-```bash
-pkg install python git
+pkg update -y && pkg upgrade -y
 ```
-```bash
-rm main.py
+
+**2. Install Python & Git:**
 ```
-```bash
-git clone https://github.com/Shadhink412/fb-new-account-otp-bluster.git
+pkg install python git -y
 ```
-```bash
-cd fb-new-account-otp-bluster
+
+**3. Install pip dependencies:**
 ```
-```bash
 pip install requests
 ```
-```bash
-pip install pycryptodome
-```
-```bash
-python main.py
-```
 
-### Linux / VPS
-
-```bash
-sudo apt install python3 python3-pip git
+**4. Clone the repository:**
 ```
-```bash
-rm main.py
-```
-```bash
 git clone https://github.com/Shadhink412/fb-new-account-otp-bluster.git
 ```
-```bash
+
+**5. Enter the folder:**
+```
 cd fb-new-account-otp-bluster
 ```
-```bash
-pip3 install requests
+
+**6. Run the tool:**
 ```
-```bash
-pip3 install pycryptodome
-```
-```bash
-python3 main.py
+python fb_otp_sender.py
 ```
 
-### Windows
+---
 
-> ⚠️ Windows version is not publicly available. Contact for access.
->
-> Telegram: [@HyperGox](https://t.me/HyperGox) · WhatsApp: 01315076545
+## 📖 How to Use
 
-## 🚀 Usage
+### Main Menu
 
+| Option | Description |
+|--------|-------------|
+| `1` | ▶ Start sending OTP |
+| `2` | 🔗 Proxy Settings |
+| `3` | 📋 Number File management |
+| `4` | ⚡ Mode Settings (Normal / Brutal) |
+| `5` | 📱 Device Mode selector |
+| `6` | 📢 Telegram contact |
+| `0` | Exit |
+
+### Step-by-Step
+
+1. **Add Numbers** — Go to option `3` → Add phone numbers with country code
+2. **Set Proxy** *(optional)* — Go to option `2` → Add proxy `host:port:user:pass`
+3. **Choose Mode** — Go to option `4` → Normal (serial) or Brutal (multi-thread)
+4. **Select Device** — Go to option `5` → Android / PC / Mac / iPhone
+5. **Start** — Press `1` to begin sending
+
+### Number Format
+
+Add phone numbers with country code, one per line:
 ```
-1. Run: python main.py
-2. Add numbers: [3] Number → [1] Add
-3. Set proxy:   [2] Proxy → [1] Add
-4. Start:       [1] Start
+8801XXXXXXXXX
+2250XXXXXXXXX
 ```
 
-**Number format** — one per line with country code in `number.txt`:
-```
-8801712345678
-919876543210
-2250701234567
-```
+---
 
-## 📁 Files
+## ⚠️ Important Notes
 
-```
-main.py        → Run this
-number.txt     → Phone numbers (one per line)
-success.txt    → Sent numbers
-failed.txt     → Failed numbers
-gox.session    → Saved settings
-```
+- Requires active **HWID license** to run
+- Contact [@HyperGox](https://t.me/HyperGox) on Telegram for license activation
+- Your HWID will be shown when you first run the tool
+- Proxy is recommended for best results
+
+---
 
 ## 📞 Contact
 
-<div align="center">
+- **Telegram:** [@HyperGox](https://t.me/HyperGox)
+- **WhatsApp:** 01315076545
+- **Channel:** [t.me/GoxToolz](https://t.me/GoxToolz)
 
-[![Telegram](https://img.shields.io/badge/Telegram-@HyperGox-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HyperGox)
-[![Channel](https://img.shields.io/badge/Channel-GoxToolz-0088CC?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/GoxToolz)
+---
 
-**Built with ❤️ by HyperGox**
-
-</div>
+> Made with ❤️ by **GoxToolz**
