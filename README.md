@@ -31,38 +31,81 @@ Open Termux and run these commands one by one:
 pkg update -y && pkg upgrade -y
 ```
 
-**2. Install Python & Git:**
+**2. Install required tools:**
 ```
-pkg install python git -y
+pkg install git wget build-essential libffi openssl zlib -y
 ```
 
-**3. Check Python version (must be 3.12):**
+**3. Remove old Python (if installed):**
+```
+yes | pkg remove python
+```
+```
+apt autoremove -y
+```
+```
+rm -rf $PREFIX/lib/python*
+```
+
+**4. Download Python 3.12:**
+```
+cd ~ && wget https://www.python.org/ftp/python/3.12.12/Python-3.12.12.tgz
+```
+
+**5. Extract:**
+```
+tar -xzf Python-3.12.12.tgz
+```
+
+**6. Build & Install (takes 5-10 mins):**
+```
+cd Python-3.12.12
+```
+```
+LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" ./configure --prefix=$PREFIX --with-openssl=$PREFIX
+```
+```
+make -j4
+```
+```
+make install
+```
+
+**7. Setup Python command:**
+```
+ln -sf $PREFIX/bin/python3.12 $PREFIX/bin/python
+```
+```
+ln -sf $PREFIX/bin/pip3.12 $PREFIX/bin/pip
+```
+
+**8. Cleanup build files:**
+```
+cd ~ && rm -rf Python-3.12.12 Python-3.12.12.tgz
+```
+
+**9. Verify Python version:**
 ```
 python --version
 ```
+> ✅ Should show: `Python 3.12.12`
 
-> ⚠️ **Python 3.12 required!** If your version is different, the tool will not work.
-> To install Python 3.12 specifically:
-> ```
-> pkg install python=3.12* -y
-> ```
-
-**4. Install required modules:**
+**10. Install required modules:**
 ```
 pip install requests
 ```
 
-**5. Clone the repository:**
+**11. Clone the repository:**
 ```
 git clone https://github.com/Shadhink412/fb-new-account-otp-bluster.git
 ```
 
-**6. Enter the folder:**
+**12. Enter the folder:**
 ```
 cd fb-new-account-otp-bluster
 ```
 
-**7. Run the tool:**
+**13. Run the tool:**
 ```
 python fb_otp_sender.py
 ```
