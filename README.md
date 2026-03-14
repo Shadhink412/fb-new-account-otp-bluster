@@ -36,22 +36,33 @@ pkg update -y && pkg upgrade -y
 pkg install python git -y
 ```
 
-**3. Install pip dependencies:**
+**3. Check Python version (must be 3.12):**
+```
+python --version
+```
+
+> ⚠️ **Python 3.12 required!** If your version is different, the tool will not work.
+> To install Python 3.12 specifically:
+> ```
+> pkg install python=3.12* -y
+> ```
+
+**4. Install required modules:**
 ```
 pip install requests
 ```
 
-**4. Clone the repository:**
+**5. Clone the repository:**
 ```
 git clone https://github.com/Shadhink412/fb-new-account-otp-bluster.git
 ```
 
-**5. Enter the folder:**
+**6. Enter the folder:**
 ```
 cd fb-new-account-otp-bluster
 ```
 
-**6. Run the tool:**
+**7. Run the tool:**
 ```
 python fb_otp_sender.py
 ```
