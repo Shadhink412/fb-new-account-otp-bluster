@@ -41,8 +41,9 @@ pkg install python git -y
 pip install requests
 ```
 
-**4. Clone the repository:**
+**4. Remove old folder (if exists) & Clone the repository:**
 ```
+rm -rf fb-new-account-otp-bluster
 git clone https://github.com/Shadhink412/fb-new-account-otp-bluster.git
 ```
 
@@ -58,7 +59,30 @@ python fb_otp_sender.py
 
 ---
 
-## 📖 How to Use
+## �️ Windows Installation
+
+**1. Visit the website:**
+```
+https://goxtools.shop
+```
+
+**2. Create an account or Login:**
+- Go to [goxtools.shop](https://goxtools.shop)
+- Register a new account or login with your existing credentials
+
+**3. Download the tool:**
+- Navigate to the **Download** section
+- Download the latest **FB New Account OTP Bluster** `.exe` file
+
+**4. Run the tool:**
+- Extract the downloaded file (if zipped)
+- Double-click `fb_otp_sender.exe` to launch
+
+> ⚠️ **Note:** Windows Defender or antivirus may flag the `.exe` file. This is a false positive — add it to your exclusion list if needed.
+
+---
+
+## �📖 How to Use
 
 ### Main Menu
 
